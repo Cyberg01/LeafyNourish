@@ -16,11 +16,11 @@ def predict():
     nitrogen = request.form.get('nitrogen')
     fosfor = request.form.get('fosfor')
     kalium = request.form.get('kalium')
-    suhu = request.form.get('suhu')
-    kelembapan = request.form.get('kelembapan')
+    temperature = request.form.get('suhu')
+    humidity = request.form.get('kelembapan')
     ph = request.form.get('ph')
 
-    input_query = np.array([[nitrogen, fosfor, kalium, suhu, kelembapan, ph]])
+    input_query = np.array([[nitrogen, fosfor, kalium, temperature, humidity, ph]])
 
     recommendation = model.predict(input_query)[0]
 
