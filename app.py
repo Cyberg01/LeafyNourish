@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import pickle
 
